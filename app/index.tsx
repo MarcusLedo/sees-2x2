@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, Image, ImageBackground } from "react-native";
 
 const aigis = require("../assets/images/Aigis.jpg");
 const makoto = require("../assets/images/Makoto.jpg");
-const junpei = require("../assets/images/Junpei.jpg");
+const mitsuru = require("../assets/images/Mitsuru.jpg");
 const koromaru = require("../assets/images/Koromaru.jpg");
 
 export default function Index() {
@@ -13,9 +13,14 @@ export default function Index() {
           source={makoto}
           style={styles.image}
           imageStyle={styles.imageShiftMakoto}
-        >
-          <Text>1</Text>
-        </ImageBackground>
+        ></ImageBackground>
+
+        <View style={styles.contentContainer}>
+          <View style={styles.textContainer}>
+            <Text style={styles.textStyle1}>Done and Dusted.</Text>
+            <Text style={styles.textStyle1}></Text>
+          </View>
+        </View>
       </View>
 
       <View style={[styles.childContainer]}>
@@ -23,9 +28,14 @@ export default function Index() {
           source={koromaru}
           style={styles.image}
           imageStyle={styles.imageShiftKoromaru}
-        >
-          <Text>2</Text>
-        </ImageBackground>
+        ></ImageBackground>
+
+        <View style={styles.contentContainer}>
+          <View style={styles.textContainer}>
+            <Text style={styles.textStyle1}>Woof! Woof! Woof!</Text>
+            <Text style={styles.textStyle1}></Text>
+          </View>
+        </View>
       </View>
 
       <View style={[styles.childContainer]}>
@@ -33,19 +43,29 @@ export default function Index() {
           source={aigis}
           style={styles.image}
           imageStyle={styles.imageShiftAigis}
-        >
-          <Text>3</Text>
-        </ImageBackground>
+        ></ImageBackground>
+
+        <View style={styles.contentContainer}>
+          <View style={styles.textContainer}>
+            <Text style={styles.textStyle1}>Target</Text>
+            <Text style={styles.textStyle1}>Neutralized.</Text>
+          </View>
+        </View>
       </View>
 
       <View style={[styles.childContainer]}>
         <ImageBackground
-          source={junpei}
+          source={mitsuru}
           style={styles.image}
-          imageStyle={styles.imageShiftJunpei}
-        >
-          <Text>4</Text>
-        </ImageBackground>
+          imageStyle={styles.imageShiftMitsuru}
+        ></ImageBackground>
+
+        <View style={styles.contentContainer}>
+          <View style={styles.textContainer}>
+            <Text style={styles.textStyle1}>Kneel before me.</Text>
+            <Text style={styles.textStyle1}></Text>
+          </View>
+        </View>
       </View>
     </View>
   );
@@ -61,9 +81,39 @@ const styles = StyleSheet.create({
   childContainer: {
     width: "50%",
     height: "50%",
+    alignItems: "stretch",
+    backgroundColor: "black",
+  },
+
+  contentContainer: {
+    position: "absolute",
+    alignContent: "center",
+    justifyContent: "center",
+    top: "50%",
+    left: "50%",
+    transform: [{ translateX: -80 }, { translateY: -40 }],
+    width: "80%",
+    height: "30%",
+  },
+
+  textContainer: {
+    display: "flex",
+    flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "black",
+  },
+
+  textStyle1: {
+    textAlign: "center",
+    color: "white",
+    fontWeight: "bold",
+    fontSize: 24,
+  },
+
+  textStyle2: {
+    color: "white",
+    fontWeight: "bold",
+    fontSize: 24,
   },
 
   image: {
@@ -71,7 +121,7 @@ const styles = StyleSheet.create({
     width: "100%",
     justifyContent: "center",
     alignItems: "center",
-    opacity: 0.8,
+    opacity: 0.7,
     overflow: "hidden",
   },
 
@@ -82,15 +132,15 @@ const styles = StyleSheet.create({
   },
 
   imageShiftMakoto: {
-    width: "270%",
+    width: "272%",
     resizeMode: "cover",
     transform: [{ translateX: -350 }],
   },
 
-  imageShiftJunpei: {
-    width: "260%",
+  imageShiftMitsuru: {
+    width: "300%",
     resizeMode: "cover",
-    transform: [{ translateX: -290 }],
+    transform: [{ translateX: 0 }],
   },
 
   imageShiftKoromaru: {
