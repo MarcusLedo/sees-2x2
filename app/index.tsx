@@ -1,22 +1,51 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Image, ImageBackground } from "react-native";
+
+const aigis = require("../assets/images/Aigis.jpg");
+const makoto = require("../assets/images/Makoto.jpg");
+const junpei = require("../assets/images/Junpei.jpg");
+const koromaru = require("../assets/images/Koromaru.jpg");
 
 export default function Index() {
   return (
     <View style={styles.container}>
-      <View style={[styles.childContainer, styles.blue]}>
-        <Text>1</Text>
+      <View style={[styles.childContainer]}>
+        <ImageBackground
+          source={makoto}
+          style={styles.image}
+          imageStyle={styles.imageShiftMakoto}
+        >
+          <Text>1</Text>
+        </ImageBackground>
       </View>
 
-      <View style={[styles.childContainer, styles.orange]}>
-        <Text>2</Text>
+      <View style={[styles.childContainer]}>
+        <ImageBackground
+          source={koromaru}
+          style={styles.image}
+          imageStyle={styles.imageShiftKoromaru}
+        >
+          <Text>2</Text>
+        </ImageBackground>
       </View>
 
-      <View style={[styles.childContainer, styles.yellow]}>
-        <Text>3</Text>
+      <View style={[styles.childContainer]}>
+        <ImageBackground
+          source={aigis}
+          style={styles.image}
+          imageStyle={styles.imageShiftAigis}
+        >
+          <Text>3</Text>
+        </ImageBackground>
       </View>
 
-      <View style={[styles.childContainer, styles.red]}>
-        <Text>4</Text>
+      <View style={[styles.childContainer]}>
+        <ImageBackground
+          source={junpei}
+          style={styles.image}
+          imageStyle={styles.imageShiftJunpei}
+        >
+          <Text>4</Text>
+        </ImageBackground>
       </View>
     </View>
   );
@@ -24,35 +53,49 @@ export default function Index() {
 
 const styles = StyleSheet.create({
   container: {
-    display: "flex",
+    flex: 1,
+    flexDirection: "row",
     flexWrap: "wrap",
-    height: "100%",
-    flexDirection: "column",
-    alignItems: "stretch",
-    justifyContent: "space-between",
   },
 
   childContainer: {
-    display: "flex",
-    minWidth: "50%",
-    minHeight: "50%",
+    width: "50%",
+    height: "50%",
     alignItems: "center",
     justifyContent: "center",
+    backgroundColor: "black",
   },
 
-  red: {
-    backgroundColor: "#ff0045",
+  image: {
+    height: "100%",
+    width: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+    opacity: 0.8,
+    overflow: "hidden",
   },
 
-  blue: {
-    backgroundColor: "#90dadb",
+  imageShiftAigis: {
+    width: "220%",
+    resizeMode: "cover",
+    transform: [{ translateX: -240 }],
   },
 
-  yellow: {
-    backgroundColor: "#ffd800",
+  imageShiftMakoto: {
+    width: "270%",
+    resizeMode: "cover",
+    transform: [{ translateX: -350 }],
   },
 
-  orange: {
-    backgroundColor: "#fb8500",
+  imageShiftJunpei: {
+    width: "260%",
+    resizeMode: "cover",
+    transform: [{ translateX: -290 }],
+  },
+
+  imageShiftKoromaru: {
+    width: "270%",
+    resizeMode: "cover",
+    transform: [{ translateX: -189 }],
   },
 });

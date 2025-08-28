@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "spinning-friends",
-    "slug": "spinning-friends",
+    "name": "sees-4x4",
+    "slug": "sees-4x4",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "spinningfriends",
+    "scheme": "sees-4x4",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
