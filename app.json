@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "sees-4x4",
-    "slug": "sees-4x4",
+    "name": "sees-2x2",
+    "slug": "sees-2x2",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
