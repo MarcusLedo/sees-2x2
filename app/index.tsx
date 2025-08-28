@@ -5,6 +5,11 @@ const makoto = require("../assets/images/Makoto.jpg");
 const mitsuru = require("../assets/images/Mitsuru.jpg");
 const koromaru = require("../assets/images/Koromaru.jpg");
 
+const universe = require("../assets/images/universe.jpg");
+const strength = require("../assets/images/strength.jpg");
+const chariot = require("../assets/images/chariot.jpg");
+const empress = require("../assets/images/empress.jpg");
+
 export default function Index() {
   return (
     <View style={styles.container}>
@@ -18,7 +23,7 @@ export default function Index() {
         <View style={styles.contentContainer}>
           <View style={styles.textContainer}>
             <Text style={styles.textStyle1}>Done and Dusted.</Text>
-            <Text style={styles.textStyle1}></Text>
+            <Image source={universe} style={styles.card} />
           </View>
         </View>
       </View>
@@ -33,7 +38,7 @@ export default function Index() {
         <View style={styles.contentContainer}>
           <View style={styles.textContainer}>
             <Text style={styles.textStyle1}>Woof! Woof! Woof!</Text>
-            <Text style={styles.textStyle1}></Text>
+            <Image source={strength} style={styles.card} />
           </View>
         </View>
       </View>
@@ -49,6 +54,7 @@ export default function Index() {
           <View style={styles.textContainer}>
             <Text style={styles.textStyle1}>Target</Text>
             <Text style={styles.textStyle1}>Neutralized.</Text>
+            <Image source={chariot} style={styles.card} />
           </View>
         </View>
       </View>
@@ -63,7 +69,7 @@ export default function Index() {
         <View style={styles.contentContainer}>
           <View style={styles.textContainer}>
             <Text style={styles.textStyle1}>Kneel before me.</Text>
-            <Text style={styles.textStyle1}></Text>
+            <Image source={empress} style={styles.card} />
           </View>
         </View>
       </View>
@@ -123,6 +129,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     opacity: 0.7,
     overflow: "hidden",
+  },
+
+  card: {
+    width: "30%",
+    height: "60%",
   },
 
   imageShiftAigis: {
