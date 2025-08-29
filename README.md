@@ -1,6 +1,6 @@
 # SEES 2x2 👋
 
-Just a simple a view divinng the screen into 4 quadrants (Views).
+Just a simple a view dividing the screen into 4 quadrants (Views).
 Objective: Learn the basic syntax of react native and expo functionalities
 
 <div align="center">
